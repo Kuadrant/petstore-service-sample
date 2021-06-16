@@ -17,6 +17,7 @@ RUN go build -o petstore -v main.go
 # Final image
 FROM scratch
 COPY --from=build /opt/petstore/petstore /petstore
+USER 1000
 EXPOSE 8080
 EXPOSE 9090
-ENTRYPOINT ["/petstore"]
+CMD ["/petstore"]

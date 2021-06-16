@@ -33,8 +33,3 @@ spec:
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 10
-        securityContext:
-          allowPrivilegeEscalation: false
-      securityContext:
-        runAsNonRoot: true
-      terminationGracePeriodSeconds: 10
