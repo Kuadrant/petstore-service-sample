@@ -33,8 +33,10 @@ push-image:
 .PHONY: install
 install:
 	kubectl apply -f manifests/
+	kubectl create configmap petstore-oas --from-file=./pkg/openapi/petstore.yaml
 
 .PHONY: uninstall
 uninstall:
-	kubectl delete -f manifests/
+	-kubectl delete -f manifests/
+	-kubectl delete configmap petstore-oas
 

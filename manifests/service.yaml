@@ -9,6 +9,7 @@ metadata:
     discovery.kuadrant.io/port: api
     discovery.kuadrant.io/oas-path: "/openapi"
     discovery.kuadrant.io/oas-port: openapi
+    discovery.kuadrant.io/oas-configmap: petstore-oas
   labels:
     discovery.kuadrant.io/enabled: "true"
     app: petstore
